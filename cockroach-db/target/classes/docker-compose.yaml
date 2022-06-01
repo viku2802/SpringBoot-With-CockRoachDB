@@ -1,0 +1,32 @@
+#version: "3"
+#services:
+#  node_1:
+#    image: cockroachdb/cockroach:v20.2.8
+#    container_name: node_1
+#    hostname: node_1
+#    volumes:
+#      - ./db/node_1:/cockroach/cockroach-data
+#    ports:
+#      - 8080:8080
+#      - 26257:26257    
+#    command: ["start", "--insecure", "--advertise-addr=node_1"]
+#  node_2:
+#    image: cockroachdb/cockroach:v20.2.8
+#    container_name: node_2
+#    hostname: node_2
+#    volumes:
+#      - ./db/node_2:/cockroach/cockroach-data
+#    ports:
+#      - 8082:8082
+#      - 26258:26258    
+#    command: ["start", "--insecure", "--advertise-addr=roach2", "--join=node_1"]
+#  node_3:
+#    image: cockroachdb/cockroach:v20.2.8
+#    container_name: node_3
+#    hostname: node_3
+#    volumes:
+#      - ./db/node_3:/cockroach/cockroach-data
+#    ports:
+#      - 8084:8084
+#      - 26259:26259    
+#    command: ["start", "--insecure", "--advertise-addr=node_3", "--join=node_1"]

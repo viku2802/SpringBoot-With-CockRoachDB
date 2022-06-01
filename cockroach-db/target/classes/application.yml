@@ -1,0 +1,7 @@
+#server:
+#  port: 8085
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:26257/vikash
+#    username: viks
+#    password: India@1234
